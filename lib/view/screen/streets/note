@@ -1,0 +1,42 @@
+Card(
+                          child: Row(
+                            children: [
+                              
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                        ' كود العمليه : ${homeBuilding!.operationCode.toString()}'),
+                                    Text(
+                                        ' المنطقه : ${homeBuilding.region.toString()}'),
+                                    Text(
+                                        'السنه الماليه : ${homeBuilding.fiscalYear.toString()}'),
+                                    Text(
+                                        'قيمة المقايسه : ${homeBuilding.comparisonValue.toString()}'),
+                                    Text(
+                                        'المبلغ المسدد : ${homeBuilding.amountPaid.toString()}'),
+                                    Text(
+                                        'تاريخ القسيمه : ${homeBuilding.couponDate.toString()}'),
+                                    Text(
+                                        'إسم العمليه : ${homeBuilding.operationName.toString()}'),
+                                    Text(
+                                        'موقف العمليه : ${homeBuilding.operationPosition.toString()}'),
+                                    Text(
+                                        'ملاحظات : ${homeBuilding.notes.toString()}'),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                child: IconButton(
+                                    onPressed: () {
+                                      box.deleteAt(index);
+                                    },
+                                    icon: const Icon(Icons.delete)),
+                              ),
+                            ],
+                          ),
+                        ),
